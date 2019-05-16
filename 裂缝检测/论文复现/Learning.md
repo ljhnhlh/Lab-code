@@ -4,3 +4,4 @@ maxpool: ` nn.MaxPool2d(kernel_size=2, stride=2)`
 
 BN ：` nn.BatchNorm2d(x)`
 ReLU:  `nn.ReLU(inplace=True)`
+
