@@ -1,0 +1,587 @@
+Epoch 1/9
+----------
+tensor(4280, device='cuda:0')
+tensor(5834, device='cuda:0')
+tensor(6012, device='cuda:0')
+train Loss: 0.5933 PRE: 0.7336 REC: 0.7119
+tensor(4890, device='cuda:0')
+tensor(5506, device='cuda:0')
+tensor(10116, device='cuda:0')
+val Loss: 0.5905 PRE: 0.8881 REC: 0.4834
+
+Epoch 2/9
+----------
+tensor(4056, device='cuda:0')
+tensor(5306, device='cuda:0')
+tensor(6012, device='cuda:0')
+train Loss: 0.5100 PRE: 0.7644 REC: 0.6747
+tensor(7376, device='cuda:0')
+tensor(8844, device='cuda:0')
+tensor(10116, device='cuda:0')
+val Loss: 0.4941 PRE: 0.8340 REC: 0.7291
+
+Epoch 3/9
+----------
+tensor(4278, device='cuda:0')
+tensor(5562, device='cuda:0')
+tensor(6012, device='cuda:0')
+train Loss: 0.4659 PRE: 0.7691 REC: 0.7116
+tensor(7352, device='cuda:0')
+tensor(8672, device='cuda:0')
+tensor(10116, device='cuda:0')
+val Loss: 0.4676 PRE: 0.8478 REC: 0.7268
+
+Epoch 4/9
+----------
+tensor(4376, device='cuda:0')
+tensor(5626, device='cuda:0')
+tensor(6012, device='cuda:0')
+train Loss: 0.4399 PRE: 0.7778 REC: 0.7279
+tensor(7374, device='cuda:0')
+tensor(8614, device='cuda:0')
+tensor(10116, device='cuda:0')
+val Loss: 0.4479 PRE: 0.8560 REC: 0.7289
+
+Epoch 5/9
+----------
+tensor(4312, device='cuda:0')
+tensor(5458, device='cuda:0')
+tensor(6012, device='cuda:0')
+train Loss: 0.4233 PRE: 0.7900 REC: 0.7172
+tensor(7544, device='cuda:0')
+tensor(8766, device='cuda:0')
+tensor(10116, device='cuda:0')
+val Loss: 0.4350 PRE: 0.8606 REC: 0.7457
+
+Epoch 6/9
+----------
+tensor(4450, device='cuda:0')
+tensor(5580, device='cuda:0')
+tensor(6012, device='cuda:0')
+train Loss: 0.4081 PRE: 0.7975 REC: 0.7402
+tensor(7408, device='cuda:0')
+tensor(8540, device='cuda:0')
+tensor(10116, device='cuda:0')
+val Loss: 0.4385 PRE: 0.8674 REC: 0.7323
+
+Epoch 7/9
+----------
+tensor(4516, device='cuda:0')
+tensor(5656, device='cuda:0')
+tensor(6012, device='cuda:0')
+train Loss: 0.4001 PRE: 0.7984 REC: 0.7512
+tensor(7698, device='cuda:0')
+tensor(8866, device='cuda:0')
+tensor(10116, device='cuda:0')
+val Loss: 0.4113 PRE: 0.8683 REC: 0.7610
+
+Epoch 8/9
+----------
+tensor(4596, device='cuda:0')
+tensor(5672, device='cuda:0')
+tensor(6012, device='cuda:0')
+train Loss: 0.3866 PRE: 0.8103 REC: 0.7645
+tensor(7600, device='cuda:0')
+tensor(8636, device='cuda:0')
+tensor(10116, device='cuda:0')
+val Loss: 0.4078 PRE: 0.8800 REC: 0.7513
+
+Epoch 9/9
+----------
+tensor(4716, device='cuda:0')
+tensor(5776, device='cuda:0')
+tensor(6012, device='cuda:0')
+train Loss: 0.3789 PRE: 0.8165 REC: 0.7844
+tensor(6902, device='cuda:0')
+tensor(7662, device='cuda:0')
+tensor(10116, device='cuda:0')
+val Loss: 0.4446 PRE: 0.9008 REC: 0.6823
+
+Training complete in 0m 52s
+Best val PRE: 0.9008 REC: 0.6823
+chen@chen:~/Lin/Reimplement$ python train.py 
+cuda:0
+Epoch 0/42
+----------
+
+
+tensor(242232, device='cuda:0')
+tensor(284170, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.3320 PRE: 0.8524 REC: 0.8072
+
+
+tensor(468770, device='cuda:0')
+tensor(541086, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.2706 PRE: 0.8664 REC: 0.9138
+
+Epoch 1/42
+----------
+tensor(265662, device='cuda:0')
+tensor(297198, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.2413 PRE: 0.8939 REC: 0.8853
+tensor(424212, device='cuda:0')
+tensor(453682, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.2514 PRE: 0.9350 REC: 0.8269
+
+Epoch 2/42
+----------
+tensor(269426, device='cuda:0')
+tensor(298756, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.2215 PRE: 0.9018 REC: 0.8978
+tensor(472426, device='cuda:0')
+tensor(541164, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.2500 PRE: 0.8730 REC: 0.9209
+
+Epoch 3/42
+----------
+tensor(271706, device='cuda:0')
+tensor(299546, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.2094 PRE: 0.9071 REC: 0.9054
+tensor(461744, device='cuda:0')
+tensor(504766, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.2180 PRE: 0.9148 REC: 0.9001
+
+Epoch 4/42
+----------
+tensor(273638, device='cuda:0')
+tensor(300138, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1997 PRE: 0.9117 REC: 0.9118
+tensor(484758, device='cuda:0')
+tensor(541488, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.2037 PRE: 0.8952 REC: 0.9450
+
+Epoch 5/42
+----------
+tensor(275170, device='cuda:0')
+tensor(300668, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1912 PRE: 0.9152 REC: 0.9169
+tensor(468326, device='cuda:0')
+tensor(506334, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1960 PRE: 0.9249 REC: 0.9129
+
+Epoch 6/42
+----------
+tensor(276290, device='cuda:0')
+tensor(300888, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1846 PRE: 0.9182 REC: 0.9207
+tensor(470774, device='cuda:0')
+tensor(505394, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1830 PRE: 0.9315 REC: 0.9177
+
+Epoch 7/42
+----------
+tensor(276916, device='cuda:0')
+tensor(300940, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1796 PRE: 0.9202 REC: 0.9228
+tensor(469150, device='cuda:0')
+tensor(506548, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1903 PRE: 0.9262 REC: 0.9145
+
+Epoch 8/42
+----------
+tensor(277934, device='cuda:0')
+tensor(301498, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1750 PRE: 0.9218 REC: 0.9261
+tensor(480590, device='cuda:0')
+tensor(523170, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1815 PRE: 0.9186 REC: 0.9368
+
+Epoch 9/42
+----------
+tensor(278738, device='cuda:0')
+tensor(301584, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1709 PRE: 0.9242 REC: 0.9288
+tensor(458236, device='cuda:0')
+tensor(485754, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1870 PRE: 0.9433 REC: 0.8933
+
+Epoch 10/42
+----------
+tensor(280696, device='cuda:0')
+tensor(302170, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1588 PRE: 0.9289 REC: 0.9353
+tensor(478382, device='cuda:0')
+tensor(512074, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1654 PRE: 0.9342 REC: 0.9325
+
+Epoch 11/42
+----------
+tensor(280842, device='cuda:0')
+tensor(302140, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1576 PRE: 0.9295 REC: 0.9358
+tensor(478680, device='cuda:0')
+tensor(512576, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1649 PRE: 0.9339 REC: 0.9331
+
+Epoch 12/42
+----------
+tensor(281060, device='cuda:0')
+tensor(302400, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1569 PRE: 0.9294 REC: 0.9366
+tensor(480740, device='cuda:0')
+tensor(515620, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1636 PRE: 0.9324 REC: 0.9371
+
+Epoch 13/42
+----------
+tensor(281138, device='cuda:0')
+tensor(302452, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1563 PRE: 0.9295 REC: 0.9368
+tensor(474654, device='cuda:0')
+tensor(505438, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1652 PRE: 0.9391 REC: 0.9253
+
+Epoch 14/42
+----------
+tensor(281230, device='cuda:0')
+tensor(302246, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1554 PRE: 0.9305 REC: 0.9371
+tensor(477736, device='cuda:0')
+tensor(510324, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1641 PRE: 0.9361 REC: 0.9313
+
+Epoch 15/42
+----------
+tensor(281144, device='cuda:0')
+tensor(302146, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1552 PRE: 0.9305 REC: 0.9368
+tensor(480824, device='cuda:0')
+tensor(515488, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1627 PRE: 0.9328 REC: 0.9373
+
+Epoch 16/42
+----------
+tensor(281148, device='cuda:0')
+tensor(302070, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1545 PRE: 0.9307 REC: 0.9369
+tensor(482554, device='cuda:0')
+tensor(518280, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1621 PRE: 0.9311 REC: 0.9407
+
+Epoch 17/42
+----------
+tensor(281430, device='cuda:0')
+tensor(302294, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1540 PRE: 0.9310 REC: 0.9378
+tensor(477694, device='cuda:0')
+tensor(509906, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1632 PRE: 0.9368 REC: 0.9312
+
+Epoch 18/42
+----------
+tensor(281554, device='cuda:0')
+tensor(302312, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1536 PRE: 0.9313 REC: 0.9382
+tensor(475330, device='cuda:0')
+tensor(505978, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1638 PRE: 0.9394 REC: 0.9266
+
+Epoch 19/42
+----------
+tensor(281530, device='cuda:0')
+tensor(302300, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1531 PRE: 0.9313 REC: 0.9381
+tensor(479398, device='cuda:0')
+tensor(512328, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1614 PRE: 0.9357 REC: 0.9345
+
+Epoch 20/42
+----------
+tensor(281766, device='cuda:0')
+tensor(302398, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1514 PRE: 0.9318 REC: 0.9389
+tensor(481010, device='cuda:0')
+tensor(514774, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1605 PRE: 0.9344 REC: 0.9377
+
+Epoch 21/42
+----------
+tensor(281858, device='cuda:0')
+tensor(302432, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1512 PRE: 0.9320 REC: 0.9392
+tensor(477180, device='cuda:0')
+tensor(508486, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1617 PRE: 0.9384 REC: 0.9302
+
+Epoch 22/42
+----------
+tensor(281938, device='cuda:0')
+tensor(302604, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1513 PRE: 0.9317 REC: 0.9395
+tensor(478830, device='cuda:0')
+tensor(511164, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1611 PRE: 0.9367 REC: 0.9334
+
+Epoch 23/42
+----------
+tensor(281960, device='cuda:0')
+tensor(302458, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1508 PRE: 0.9322 REC: 0.9396
+tensor(479670, device='cuda:0')
+tensor(512592, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1610 PRE: 0.9358 REC: 0.9350
+
+Epoch 24/42
+----------
+tensor(281832, device='cuda:0')
+tensor(302410, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1508 PRE: 0.9320 REC: 0.9391
+tensor(482130, device='cuda:0')
+tensor(516798, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1603 PRE: 0.9329 REC: 0.9398
+
+Epoch 25/42
+----------
+tensor(281916, device='cuda:0')
+tensor(302520, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1509 PRE: 0.9319 REC: 0.9394
+tensor(481722, device='cuda:0')
+tensor(516022, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1605 PRE: 0.9335 REC: 0.9390
+
+Epoch 26/42
+----------
+tensor(281954, device='cuda:0')
+tensor(302586, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1508 PRE: 0.9318 REC: 0.9395
+tensor(480410, device='cuda:0')
+tensor(513686, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1605 PRE: 0.9352 REC: 0.9365
+
+Epoch 27/42
+----------
+tensor(281868, device='cuda:0')
+tensor(302366, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1509 PRE: 0.9322 REC: 0.9393
+tensor(480756, device='cuda:0')
+tensor(514246, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1604 PRE: 0.9349 REC: 0.9372
+
+Epoch 28/42
+----------
+tensor(281818, device='cuda:0')
+tensor(302408, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1507 PRE: 0.9319 REC: 0.9391
+tensor(481316, device='cuda:0')
+tensor(515268, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1603 PRE: 0.9341 REC: 0.9383
+
+Epoch 29/42
+----------
+tensor(282022, device='cuda:0')
+tensor(302556, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1508 PRE: 0.9321 REC: 0.9398
+tensor(483250, device='cuda:0')
+tensor(518894, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1605 PRE: 0.9313 REC: 0.9420
+
+Epoch 30/42
+----------
+tensor(281822, device='cuda:0')
+tensor(302090, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1505 PRE: 0.9329 REC: 0.9391
+tensor(480318, device='cuda:0')
+tensor(513516, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1603 PRE: 0.9354 REC: 0.9363
+
+Epoch 31/42
+----------
+tensor(281928, device='cuda:0')
+tensor(302406, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1507 PRE: 0.9323 REC: 0.9395
+tensor(480950, device='cuda:0')
+tensor(514654, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1603 PRE: 0.9345 REC: 0.9375
+
+Epoch 32/42
+----------
+tensor(282002, device='cuda:0')
+tensor(302564, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1503 PRE: 0.9320 REC: 0.9397
+tensor(481310, device='cuda:0')
+tensor(515408, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1605 PRE: 0.9338 REC: 0.9382
+
+Epoch 33/42
+----------
+tensor(281930, device='cuda:0')
+tensor(302462, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1506 PRE: 0.9321 REC: 0.9395
+tensor(478830, device='cuda:0')
+tensor(510976, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1607 PRE: 0.9371 REC: 0.9334
+
+Epoch 34/42
+----------
+tensor(281916, device='cuda:0')
+tensor(302440, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1504 PRE: 0.9321 REC: 0.9394
+tensor(478978, device='cuda:0')
+tensor(511310, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1608 PRE: 0.9368 REC: 0.9337
+
+Epoch 35/42
+----------
+tensor(281972, device='cuda:0')
+tensor(302558, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1505 PRE: 0.9320 REC: 0.9396
+tensor(478332, device='cuda:0')
+tensor(510290, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1610 PRE: 0.9374 REC: 0.9324
+
+Epoch 36/42
+----------
+tensor(281870, device='cuda:0')
+tensor(302428, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1507 PRE: 0.9320 REC: 0.9393
+tensor(482490, device='cuda:0')
+tensor(517378, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1603 PRE: 0.9326 REC: 0.9405
+
+Epoch 37/42
+----------
+tensor(281864, device='cuda:0')
+tensor(302438, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1506 PRE: 0.9320 REC: 0.9392
+tensor(480038, device='cuda:0')
+tensor(512908, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1604 PRE: 0.9359 REC: 0.9358
+
+Epoch 38/42
+----------
+tensor(282006, device='cuda:0')
+tensor(302530, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1504 PRE: 0.9322 REC: 0.9397
+tensor(481364, device='cuda:0')
+tensor(515240, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1602 PRE: 0.9343 REC: 0.9383
+
+Epoch 39/42
+----------
+tensor(282084, device='cuda:0')
+tensor(302670, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1506 PRE: 0.9320 REC: 0.9400
+tensor(481242, device='cuda:0')
+tensor(515110, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1603 PRE: 0.9343 REC: 0.9381
+
+Epoch 40/42
+----------
+tensor(282008, device='cuda:0')
+tensor(302482, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1505 PRE: 0.9323 REC: 0.9397
+tensor(481828, device='cuda:0')
+tensor(516124, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1600 PRE: 0.9336 REC: 0.9393
+
+Epoch 41/42
+----------
+tensor(281922, device='cuda:0')
+tensor(302424, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1507 PRE: 0.9322 REC: 0.9394
+tensor(480522, device='cuda:0')
+tensor(513912, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1604 PRE: 0.9350 REC: 0.9367
+
+Epoch 42/42
+----------
+tensor(281982, device='cuda:0')
+tensor(302440, device='cuda:0')
+tensor(300098, device='cuda:0')
+train Loss: 0.1504 PRE: 0.9324 REC: 0.9396
+tensor(478654, device='cuda:0')
+tensor(510648, device='cuda:0')
+tensor(512990, device='cuda:0')
+val Loss: 0.1608 PRE: 0.9373 REC: 0.9331
+
+Training complete in 215m 31s
+Best val PRE: 0.9373 REC: 0.9331
+chen@chen:~/Lin/Reimplement$ 
+chen@chen:~/Lin/Reimplement$ 
+chen@chen:~/Lin/Reimplement$ 
+chen@chen:~/Lin/Reimplement$ 
+chen@chen:~/Lin/Reimplement$ 

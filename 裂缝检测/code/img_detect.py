@@ -116,7 +116,12 @@ import pickle
 import torch
 pickle.load = partial(pickle.load, encoding="latin1")
 pickle.Unpickler = partial(pickle.Unpickler, encoding="latin1")
-model = torch.load('./train_3_model2.pt', map_location=lambda storage, loc: storage, pickle_module=pickle)
+
+from torchvision import datasets, models, transforms
+model = models.resnet18(pretrained=False)
+num_ftrs = model.fc.in_features
+model.fc = torch.nn.Linear(num_ftrs, 2)
+model.load_state_dict(torch.load('./modelprecise_0.280976.pt', map_location=lambda storage, loc: storage, pickle_module=pickle))
 
 model.eval()
 # 定义变换
@@ -134,16 +139,12 @@ if __name__ == '__main__':
 	# st = 'E:\\1裂缝检测\\testdata\\img2\\'
 
 
-
-
-
-
 	files = os.listdir(path)
 	file_paths=[]#构造一个存放图片的列表数据结构
 	for file in files:
 	    file_path= path +"\\" + file
 	    file_paths.append(file_path)
-	st = '../testdata/img8/'
+	st = './img7/'
 	for i in range(len(file_paths)):
 		img = io.imread(file_paths[i])
 		img = classify(img,imgNum) # 将图片分成imgNum*imgNum份进行识别
