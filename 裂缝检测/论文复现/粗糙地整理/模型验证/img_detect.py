@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*
 import os
 import torch
 import pandas as pd
@@ -18,18 +19,27 @@ class Crack(nn.Module):
     def __init__(self, Crack_cfg):
         super(Crack, self).__init__()
         self.features = self._make_layers(Crack_cfg)
-        self.linear1 = nn.Linear(32*6*6,64)
-        self.linear2 = nn.Linear(64,64)
-        self.linear3 = nn.Linear(64,2)
-
-
+        # linear layer
+#         self.classifier = nn.Linear(512, 10)
+#         self.linear1 = nn.Linear(32*6*6,64)
+#         self.linear2 = nn.Linear(64,64)
+#         self.linear3 = nn.Linear(64,25)
+        self.classifier = self.make_classifier()
+    
+    def make_classifier(self):
+        classifier = []
+        classifier += [nn.Linear(32*6*6,64),nn.ReLU(inplace=True),nn.Dropout(p=0.5)]
+        classifier += [nn.Linear(64,64),nn.ReLU(inplace=True),nn.Dropout(p=0.5)]
+        classifier += [nn.Linear(64,2)]
+        return nn.Sequential(*classifier)
+    
     def forward(self, x):
         out = self.features(x)
-#         print(out.size())
         out = out.view(out.size(0), -1)
-        out = self.linear1(out)
-        out = self.linear2(out)
-        out = self.linear3(out)
+        out = self.classifier(out)
+#         out = self.linear1(out)
+#         out = self.linear2(out)
+#         out = self.linear3(out)
         return out
 
     def _make_layers(self, cfg):
@@ -50,7 +60,6 @@ class Crack(nn.Module):
             
 #         layers += [nn.AvgPool2d(kernel_size=1, stride=1)]
         return nn.Sequential(*layers)
-    #输出图片
 def imshow(inp, title=None):
     """Imshow for Tensor."""
     inp = inp.numpy().transpose((1, 2, 0))
@@ -69,12 +78,17 @@ def predict_img(inputs):
         outputs = model_t(inputs)
         imgNum = inputs.size()[0]
         _,preds = torch.max(outputs,1)
-        std = []
         print(preds)
+        std = []
         for j in range(inputs.size()[0]):
-            if preds[j] == 0:
-                std.append(j)
-        return std
+	        std.append(preds[j])
+        # std = []
+        # print(preds)
+        # for j in range(inputs.size()[0]):
+        #     if preds[j] == 0:
+        #         std.append(j)
+        # return std
+        return std;
 def ReadImg(path,index):
 	# 读取图片
 	# DIRECTORY = "E:\\1裂缝检测\\testdata"
@@ -106,35 +120,51 @@ def classify(img,imgNum):
 	    for j in range(14,img.shape[1]-13,27):  # [2]column-----------width
 	        img_roi.append(img[(i-14):((i + 13) ), (j -14):((j + 13))])
 	        cord.append([i,j])
-	    print(i)
+	    # print(i)
+	# for i in range(0,img.shape[0]//27):
+	# 	for j in range(0,img.shape[1]//27):
+	# 		img_roi.append(img[j*27:j*27+27,i*27:i+27])
 
 	# 转换图片并开始识别
 	t = img_roi[0]
 	t = to_pil(t)
 	t = test_trainsforms(t).float()
 	t = t.unsqueeze_(0)
+	# print(t.shape)
 	# print(t.size())
 	for i in range(len(img_roi)):
-	    if i != 0 :
-	        te = img_roi[i]
-	        te = to_pil(te)
-	        te = test_trainsforms(te).float()
-	        te = te.unsqueeze_(0)
-	        t = torch.cat((t,te),0)
-	        # print(t.size())
+		if(i!=0):
+			te = img_roi[i]
+			te = to_pil(te)
+			te = test_trainsforms(te).float()
+			te = te.unsqueeze_(0)
+			# print(te.shape)
+			t = torch.cat((t,te),0)
 	st = predict_img(t)
+	# st = np.array(st)
+	for i in range(len(st)):
+		if(st[i] == 0):
+			cv2.rectangle(img, (cord[i][1]-14,cord[i][0]-14), (cord[i][1]+13,cord[i][0]+13), (255,0,0), 3)
+			j+=1
+	# ty = img.shape[0]//27
+	# tx = img.shape[1]//27
+	# for i in range(st):
+	# 	ti = i % ty
+	# 	tj = i / ty
+	# 	cv2.rectangle(img, (i[0]-14,i[1]-14), (i[0]+13,i[1]+13), (255,0,0), 3)
+	return img
 	# print(st)
 	# 对目标进行定位
-	loc = []
-	for i in st:
-	    loc.append(cord[i])
-	# print(loc)
-	# 在图片上标记目标
-	for i in loc:
-	    cv2.rectangle(img, (i[0]-14,i[1]-14), (i[0]+13,i[1]+13), (255,0,0), 3)
-	# cv2.rectangle(img, 左上角, 右下角, （r，g，b）, 粗细（1，2，3，，）)
-	# 返回已画好的图片
-	return img 
+	# loc = []
+	# for i in st:
+	#     loc.append(cord[i])
+	# # print(loc)
+	# # 在图片上标记目标
+	# for i in loc:
+	#     cv2.rectangle(img, (i[0]-14,i[1]-14), (i[0]+13,i[1]+13), (255,0,0), 3)
+	# # cv2.rectangle(img, 左上角, 右下角, （r，g，b）, 粗细（1，2，3，，）)
+	# # 返回已画好的图片
+
 	# 显示
 	# plt.imshow(temp)
 	# plt.show()
@@ -160,7 +190,7 @@ import pickle
 import torch
 
 
-model = torch.load('./crack0.9373REC_0.9331.pt')
+model = torch.load('./crack.pt')
 model_t.load_state_dict(model)
 
 model_t.eval()
@@ -178,7 +208,7 @@ if __name__ == '__main__':
 	imgNum = 6 # 图片分块数目：imgNum * imgNum
 	# path = "E:\\1裂缝检测\\testdata" # 文件路径
 	path  = "I:\\1裂缝检测\\CrackForest-dataset\\image\\"
-	st = './img/'
+	st = './img2/'
 
 
 	files = os.listdir(path)
@@ -195,3 +225,5 @@ if __name__ == '__main__':
 		print(img_name)
 		cv2.imwrite(img_name,img)
 		print(i)
+		# if(i > 2):
+		# 	break
